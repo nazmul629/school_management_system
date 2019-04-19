@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+{% load static %}
+
+{% for i in schoolinfo %}
+<div class=" text-center"><h1>{{i.school_name}}</h1></div>
+<br>
+<img src="{{i.school_img.url}}" width="1000" height="350">
+<br><br>
+<p>{{i.school_address}}</p>
+{% endfor %}
+
+
+{% endblock %}
