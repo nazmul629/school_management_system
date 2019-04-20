@@ -17,7 +17,7 @@ class StudentInfo(models.Model):
     
     Student_name = models.CharField(max_length=50)
     age = models.IntegerField()
-    gender_list = (('m',"Male"),('f','Female'))
+    gender_list = (('Male',"Male"),('FeMale','Female'))
     gender = models.CharField(max_length=10, choices = gender_list)
     Class = models.ForeignKey(Schoolallclass, on_delete = models.CASCADE)
     roll= models.IntegerField(unique=True)

@@ -1,0 +1,60 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+
+ <!-- Table Here -->
+ <table class="table table-bordered justify-content-center">
+    <tr class="text-center">
+       <td>Name</td>
+       <td>{{ student.Student_name}}</td>
+    </tr>
+
+     <tr class="text-center">
+       <td>Gender</td>
+       <td>{{ student.gender }}</td>
+    </tr>
+
+   <tr class="text-center">
+       <td>Age</td>
+       <td>{{ student.age }}</td>
+    </tr>
+   <tr class="text-center">
+       <td>Class</td>
+       <td>{{ student.Class }}</td>
+    </tr>
+   <tr class="text-center">
+       <td>Saction</td>
+       <td>{{ student.scation }}</td>
+    </tr>
+    <tr class="text-center">
+        <td>Roll</td>
+        <td>{{ student.roll }}</td>
+     </tr>
+   <tr class="text-center">
+       <td>Fathers Name</td>
+       <td>{{ student.fathers_name }}</td>
+    </tr>
+    <tr class="text-center">
+        <td>Mothers Name</td>
+        <td>{{ student.mothers_name }}</td>
+     </tr>
+
+   <tr class="text-center">
+       <td>Mobile Number</td>
+       <td>{{ student.mobile }}</td>
+    </tr>
+   <tr class="text-center">
+       <td>Address</td>
+       <td>{{ student.address }}</td>
+    </tr>
+
+ </table>
+ <td><a href="{% url 'classes'%}">Classes </a>
+   {% if request.user.is_authenticated %}
+||  <a href="{% url 'studentinfo_edit' student.id %}">Edites</a>  ||  <a href="{% url 'studentinfo_delete' student.id %}">Delete</a>
+ {% endif %}
+
+</td>
+
+{% endblock %}

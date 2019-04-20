@@ -8,7 +8,6 @@
 <table class="table table-hover">
   <thead>
     <tr>
-        <th scope="col">#</th>
       <th scope="col">Roll</th>
       <th scope="col">Name</th>
       <th scope="col">Class</th>
@@ -20,16 +19,15 @@
   <tbody>
 
       {% for student in student_list %}
-    <tr>
-        <td>{{ student.pk }}</td>
+    <tr>     
       <td>{{ student.roll }}</td>
       <td>{{ student.Student_name }}</td>
       <td>{{ student.Class }}</td>
       <td>{{ student.scation }}</td>
       <td>{{ student.mobile }}</td>
-      <td><a class="" href="">Details </a>
+      <td><a href="{% url 'student_details' student.id %}">Details </a>
           {% if request.user.is_authenticated %}
-       ||  <a href="">Edites</a>  ||  <a href="">Delete</a>
+       ||  <a href="{% url 'studentinfo_edit' student.id %}">Edites</a>  ||  <a href="{% url 'studentinfo_delete' student.id %}">Delete</a>
         {% endif %}
 
     </td>
