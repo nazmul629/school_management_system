@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>Select Month and year </h1>
+<form class="" action="" method="post">
+    {% csrf_token %}
+    {{forms.as_p}}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

@@ -24,6 +24,8 @@ urlpatterns = [
     path('',include("author.urls")),
     path('',include("schoolinfo.urls")),
     path('',include("admission.urls")),
+    path('',include("Accounts.urls")),
+    path('',include("result.urls")),
     path('', views.home, name='home')
 
 ]

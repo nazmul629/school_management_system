@@ -18,10 +18,10 @@
                  {% endif %} 
 
                 </div>
-              </div>
+            </div>
 
 
-              <div class="dropdown">
+            <div class="dropdown">
                 <button class="btn btn-dark btn-lg dropdown-toggle" type="button"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                  School Students
                 </button>
@@ -29,10 +29,18 @@
              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="{% url 'classes' %}"></i>Class</a>
                 <a class="dropdown-item" href="{% url 'admission_student' %}"></i>Admission Student</a>
-
-
              </div>
            </div>
+           <div class="dropdown">
+            <button class="btn btn-dark btn-lg dropdown-toggle" type="button"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Accounts
+            </button>
+        
+         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="{% url 'select_month' %}"></i>Add Student Fees</a>
+            <a class="dropdown-item" href="">Fee Status </a>
+         </div>
+       </div>
        
         </ul>
         
